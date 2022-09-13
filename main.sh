@@ -371,7 +371,7 @@ wget https://raw.githubusercontent.com/avcvv/IPv6ProxyInstaller/main/rebuild.sh
 chmod +x rebuild.sh
 
 sleep 1
-
+sudo iptables -t filter -A INPUT -p tcp --dport 30000:50000 -j ACCEPT
 ####
 echo "======REBOOT======"
 echo "● Finishing and rebooting"
