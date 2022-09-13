@@ -19,7 +19,7 @@ sleep 2
 echo "======TUNING SYSCTL======"
 echo "● Setting up /etc/sysctl.conf"
 cat >>/etc/sysctl.conf <<END
-net.ipv6.conf.eth0.proxy_ndp=1
+net.ipv6.conf.enp1s0.proxy_ndp=1
 net.ipv6.conf.all.proxy_ndp=1
 net.ipv6.conf.default.forwarding=1
 net.ipv6.conf.all.forwarding=1
