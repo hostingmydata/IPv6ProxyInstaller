@@ -179,7 +179,9 @@ done
 }
 
 generate_auth_ip
-
+sleep 1
+sudo iptables -t filter -A INPUT -p tcp --dport 30000:50000 -j ACCEPT
+sleep 1
 ####
 ~/3proxy/bin/3proxy ~/3proxy/3proxy.cfg
 echo "● Finishing"
